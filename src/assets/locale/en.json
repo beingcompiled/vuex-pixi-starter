@@ -1,10 +1,9 @@
 {
-	"pages": [
+	"routes": [
 		{
 			"name": "home",
 			"path": "/",
-			"title": "Page Home",
-			"body": "lorem ipsum",
+			"link": "Home",
 			"props": {
 				"title": "Page Home",
 				"body": "Lorem Ipsum"
@@ -12,9 +11,8 @@
 		},
 		{
 			"name": "one",
-			"path": "/one",
-			"title": "Page One",
-			"body": "lorem ipsum",
+			"path": "/one/:param",
+			"link": "One",
 			"props": {
 				"title": "Page One",
 				"body": "Lorem Ipsum"
@@ -22,9 +20,8 @@
 		},
 		{
 			"name": "two",
-			"path": "/two",
-			"title": "Page Two",
-			"body": "lorem ipsum",
+			"path": "/two/:param",
+			"link": "Two",
 			"props": {
 				"title": "Page Two",
 				"body": "Lorem Ipsum"
@@ -32,11 +29,30 @@
 		},
 		{
 			"name": "three",
-			"path": "/three",
-			"title": "Page Three",
-			"body": "lorem ipsum",
+			"path": "/three/:param",
+			"link": "Three",
 			"props": {
 				"title": "Page Three",
+				"body": "Lorem Ipsum"
+			}
+		}
+	],
+	"footer": [
+		{
+			"name": "terms",
+			"path": "/terms",
+			"link": "Terms & Conditions",
+			"props": {
+				"title": "Terms & Conditions",
+				"body": "Lorem Ipsum"
+			}
+		},
+		{
+			"name": "privacy",
+			"path": "/privacy",
+			"link": "Privacy",
+			"props": {
+				"title": "Privacy",
 				"body": "Lorem Ipsum"
 			}
 		}

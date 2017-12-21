@@ -1,5 +1,5 @@
 <template>
-	<div class='page'>
+	<div class='legal'>
 		<h1>{{ title }}</h1>
 		<p>{{ body }}</p>
 		<p>{{ param }}</p>
@@ -8,13 +8,13 @@
 
 <script>
 export default {
-	name: 'Page',
+	name: 'Legal',
 	props: ['title', 'body', 'param']
 }
 </script>
 
 <style scoped>
-.page {
+.legal {
 	padding: 50px;
 }
 </style>

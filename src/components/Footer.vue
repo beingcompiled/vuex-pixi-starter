@@ -1,8 +1,7 @@
 <template>
-	<div class='header'>
-		<h1>Header</h1>
+	<div class='footer'>
 		<ul>
-			<li v-for='item in nav'>
+			<li v-for='item in links'>
 				<router-link :to="item.path">{{ item.link }}</router-link>
 			</li>
 		</ul>
@@ -11,9 +10,9 @@
 
 <script>
 export default {
-	name: 'Header',
+	name: 'Footer',
 	props: {
-		nav: {
+		links: {
 			type: Array,
 			required: true
 		}
@@ -22,7 +21,11 @@ export default {
 </script>
 
 <style scoped>
-.header {
+.footer {
+	position: absolute;
+	left: 0;
+	bottom: 0;
+
 	width: 100%;
 	background-color: #222;
 	padding: 0 50px;
