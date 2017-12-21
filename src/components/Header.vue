@@ -3,7 +3,9 @@
 		<h1>Header</h1>
 		<ul>
 			<li v-for='item in nav'>
-				<router-link :to="item.path">{{ item.link }}</router-link>
+				<router-link :to="{ name: item.name, params: { param: 'param: ' + item.name } }">
+					{{ item.link }}
+				</router-link>
 			</li>
 		</ul>
 	</div>
