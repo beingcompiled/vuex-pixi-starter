@@ -16,5 +16,7 @@ export default {
 <style scoped>
 .legal {
 	padding: 50px;
+
+	text-align: left;
 }
 </style>
