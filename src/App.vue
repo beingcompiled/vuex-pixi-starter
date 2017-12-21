@@ -1,16 +1,31 @@
 <template>
-	<div id="app">
-		<ul>
-			<li><router-link to='/'>Users</router-link></li>
-			<li><router-link to='/test'>Test</router-link></li>
-		</ul>
+	<div id='app'>
+		<app-header v-bind:nav='nav'></app-header>
 		<router-view/>
+		<app-footer v-bind:links='footer'></app-footer>
 	</div>
 </template>
 
 <script>
+	import { routes, footer } from './assets/locale/en.json'
+	import Header from './components/Header.vue'
+	import Footer from './components/Footer.vue'
+
 	export default {
-		name: 'app'
+		name: 'app',
+		components: {
+			'app-header': Header,
+			'app-footer': Footer
+		},
+		data () {
+			return {
+				'nav': routes,
+				'footer': footer
+			}
+		},
+		created: function () {
+			console.log('App created:: ')
+		}
 	}
 </script>
 
@@ -21,9 +36,9 @@
 	-moz-osx-font-smoothing: grayscale;
 	text-align: center;
 	color: #2c3e50;
-	margin-top: 60px;
 }
-a {
-	color: red;
+body {
+	margin: 0;
+	padding: 0;
 }
 </style>
