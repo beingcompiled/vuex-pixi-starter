@@ -1,16 +1,28 @@
 <template>
-	<div id="app">
-		<ul>
-			<li><router-link to='/'>Users</router-link></li>
-			<li><router-link to='/test'>Test</router-link></li>
-		</ul>
+	<div id='app'>
+		<app-header v-bind:nav='nav'></app-header>
 		<router-view/>
 	</div>
 </template>
 
 <script>
+	import Header from './components/Header.vue'
+
+	import { pages } from './assets/locale/en.json'
+
 	export default {
-		name: 'app'
+		name: 'app',
+		components: {
+			'app-header': Header
+		},
+		data () {
+			return {
+				'nav': pages
+			}
+		},
+		created: function () {
+			console.log('App created:: ')
+		}
 	}
 </script>
 

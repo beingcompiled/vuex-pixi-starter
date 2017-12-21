@@ -1,28 +1,15 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import Users from '@/components/Users'
-import Test from '@/components/Test'
+import Page from '@/components/Page'
+
+import { pages } from './../assets/locale/en.json'
+
+pages.forEach(function (o) { o.component = Page })
 
 Vue.use(Router)
-
-const testProps = {
-	msg: 'example router prop'
-}
 
 export default new Router({
 	mode: 'history',
 	base: __dirname,
-	routes: [
-		{
-			path: '/',
-			name: 'Users',
-			component: Users
-		},
-		{
-			path: '/test',
-			name: 'Test',
-			component: Test,
-			props: testProps
-		}
-	]
+	routes: pages
 })

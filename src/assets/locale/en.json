@@ -1,0 +1,44 @@
+{
+	"pages": [
+		{
+			"name": "home",
+			"path": "/",
+			"title": "Page Home",
+			"body": "lorem ipsum",
+			"props": {
+				"title": "Page Home",
+				"body": "Lorem Ipsum"
+			}
+		},
+		{
+			"name": "one",
+			"path": "/one",
+			"title": "Page One",
+			"body": "lorem ipsum",
+			"props": {
+				"title": "Page One",
+				"body": "Lorem Ipsum"
+			}
+		},
+		{
+			"name": "two",
+			"path": "/two",
+			"title": "Page Two",
+			"body": "lorem ipsum",
+			"props": {
+				"title": "Page Two",
+				"body": "Lorem Ipsum"
+			}
+		},
+		{
+			"name": "three",
+			"path": "/three",
+			"title": "Page Three",
+			"body": "lorem ipsum",
+			"props": {
+				"title": "Page Three",
+				"body": "Lorem Ipsum"
+			}
+		}
+	]
+}

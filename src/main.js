@@ -4,12 +4,13 @@ import router from './router'
 import vueResource from 'vue-resource'
 
 Vue.config.productionTip = false
-
 Vue.use(vueResource)
 
+router.replace({ path: '/', redirect: '/' })
+
 new Vue({
-	el: '#app',
 	router,
+	el: '#app',
 	template: '<App/>',
 	components: { App }
 })
