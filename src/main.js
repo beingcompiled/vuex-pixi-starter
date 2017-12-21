@@ -4,6 +4,7 @@ import router from './router'
 import vueResource from 'vue-resource'
 
 Vue.config.productionTip = false
+
 Vue.use(vueResource)
 
 router.replace({ path: '/', redirect: '/' })

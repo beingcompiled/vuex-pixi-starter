@@ -2,7 +2,7 @@
 	<div class='page'>
 		<h1>{{ title }}</h1>
 		<p>{{ body }}</p>
-		<p>{{ param }}</p>
+		<p>{{ $route.params.param }}</p>
 	</div>
 </template>
 
