@@ -18,7 +18,7 @@ import Legal from './components/Legal'
 
 */
 
-import { routes, footer } from './assets/locale/en.json'
+import { routes, footer } from './assets/data.json'
 
 /*
 
@@ -47,7 +47,8 @@ let router = new Router({
 	routes: routes.concat(footer)
 })
 
-router.replace({ path: '/', redirect: '/' })
+/* Redirect (problematic for deeplinking) */
+// router.replace({ path: '/', redirect: '/' })
 
 new Vue({
 	router,

@@ -3,9 +3,10 @@
 		<h1>Header</h1>
 		<ul>
 			<li v-for='item in nav'>
-				<router-link :to="{ name: item.name, params: { param: 'param: ' + item.name } }">
+				<router-link v-if='item.name !== "home"' :to="{ name: item.name, params: { param: 123 }}">
 					{{ item.link }}
 				</router-link>
+				<router-link v-else :to="item.path">{{ item.link }}</router-link>
 			</li>
 		</ul>
 	</div>
@@ -19,6 +20,9 @@ export default {
 			type: Array,
 			required: true
 		}
+	},
+	created: function () {
+		console.log('Header created: ', this.$route.params.param)
 	}
 }
 </script>
