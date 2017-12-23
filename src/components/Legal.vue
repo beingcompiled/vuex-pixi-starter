@@ -13,10 +13,6 @@ export default {
 }
 </script>
 
-<style scoped>
-.legal {
-	padding: 50px;
-
-	text-align: left;
-}
+<style lang='styl' scoped>
+	@import '~styl/component/Legal.styl'
 </style>

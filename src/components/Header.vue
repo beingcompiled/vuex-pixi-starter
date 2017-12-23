@@ -22,29 +22,11 @@ export default {
 		}
 	},
 	created: function () {
-		console.log('Header created: ', this.$route.params.param)
+		console.log('Header created. $route.params.param: ', this.$route.params.param)
 	}
 }
 </script>
 
-<style scoped>
-.header {
-	width: 100%;
-	background-color: #222;
-	padding: 0 50px;
-
-	color: white;
-	text-align: left;
-}
-h1, h2, ul, li, a {
-	display: inline-block;
-	color: white;
-}
-ul {
-	padding: 0 50px;
-}
-li {
-	display: inline-block;
-	padding: 0 10px;
-}
+<style lang='styl' scoped>
+	@import '~styl/component/Header.styl'
 </style>

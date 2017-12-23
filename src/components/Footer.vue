@@ -20,28 +20,6 @@ export default {
 }
 </script>
 
-<style scoped>
-.footer {
-	position: absolute;
-	left: 0;
-	bottom: 0;
-
-	width: 100%;
-	background-color: #222;
-	padding: 0 50px;
-
-	color: white;
-	text-align: left;
-}
-h1, h2, ul, li, a {
-	display: inline-block;
-	color: white;
-}
-ul {
-	padding: 0 50px;
-}
-li {
-	display: inline-block;
-	padding: 0 10px;
-}
+<style lang='styl' scoped>
+	@import '~styl/component/Footer.styl'
 </style>

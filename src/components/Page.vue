@@ -13,8 +13,6 @@ export default {
 }
 </script>
 
-<style scoped>
-.page {
-	padding: 50px;
-}
+<style lang='styl' scoped>
+	@import '~styl/component/Page.styl'
 </style>

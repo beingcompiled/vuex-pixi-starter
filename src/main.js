@@ -18,7 +18,7 @@ import Legal from './components/Legal'
 
 */
 
-import { routes, footer } from './assets/data.json'
+import { routes, footer } from './assets/json/static.json'
 
 /*
 
