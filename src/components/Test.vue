@@ -4,7 +4,8 @@
 		<h1>{{ title }}</h1>
 		<p v-if='showName'>{{ user.firstName }}</p>
 		<p v-else>Nobody</p>
-		<button v-on:click='greet'>Say Greeting</button>
+		<button v-on:click='emitMethod'>Test EventBus</button>
+		<hr />
 		<input type='text' v-on:keyup='pressKey' v-on:keyup.enter='enterHit'>
 		<hr />
 		<label>First Name: </label><input type='text' v-model='user.firstName'>
@@ -17,6 +18,8 @@
 </template>
 
 <script>
+import { Events, EventBus } from '@/event-bus'
+
 export default {
 	name: 'Test',
 	props: {
@@ -36,14 +39,14 @@ export default {
 		}
 	},
 	methods: {
-		greet: function () {
-			alert('hello')
-		},
 		pressKey: function (e) {
 			console.log(e.target.value)
 		},
 		enterHit: function () {
 			console.log('You hit enter')
+		},
+		emitMethod () {
+			EventBus.$emit(Events.EVENT_NAME, { test: '123' })
 		}
 	},
 	computed: {

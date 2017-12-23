@@ -11,6 +11,8 @@ import vueResource from 'vue-resource'
 
 import Page from './components/Page'
 import Legal from './components/Legal'
+import Test from './components/Test'
+import Users from './components/Users'
 
 /*
 
@@ -18,16 +20,18 @@ import Legal from './components/Legal'
 
 */
 
-import { routes, footer } from './assets/json/static.json'
+import { pages, examples, footer } from './assets/json/static.json'
 
 /*
 
-	Adapt JSON for router
+	Adapt JSON for router (just an example)
 
 */
 
-routes.forEach(function (o) { o.component = Page })
+pages.forEach(function (o) { o.component = Page })
 footer.forEach(function (o) { o.component = Legal })
+examples[0].component = Test
+examples[1].component = Users
 
 /*
 
@@ -44,7 +48,7 @@ Vue.use(Router)
 let router = new Router({
 	mode: 'history',
 	base: __dirname,
-	routes: routes.concat(footer)
+	routes: pages.concat(examples, footer)
 })
 
 /* Redirect (problematic for deeplinking) */
@@ -53,11 +57,11 @@ let router = new Router({
 new Vue({
 	router,
 	el: '#app',
-	template: '<App :routes="routes" :footer="footer"/>',
+	template: '<App :pages="pages" :footer="footer"/>',
 	components: { App },
 	data () {
 		return {
-			routes: routes,
+			pages: pages,
 			footer: footer
 		}
 	}

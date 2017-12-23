@@ -1,5 +1,5 @@
 {
-	"routes": [
+	"pages": [
 		{
 			"name": "home",
 			"path": "/",
@@ -35,6 +35,23 @@
 				"title": "Page Three",
 				"body": "Lorem Ipsum"
 			}
+		}
+	],
+	"examples": [
+		{
+			"name": "test",
+			"path": "/test",
+			"link": "Test",
+			"props": {
+				"title": "Page Test",
+				"msg": "Lorem Ipsum"
+			}
+		},
+		{
+			"name": "users",
+			"path": "/users/",
+			"link": "Users",
+			"props": {}
 		}
 	],
 	"footer": [

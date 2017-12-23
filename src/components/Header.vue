@@ -20,9 +20,6 @@ export default {
 			type: Array,
 			required: true
 		}
-	},
-	created: function () {
-		console.log('Header created. $route.params.param: ', this.$route.params.param)
 	}
 }
 </script>

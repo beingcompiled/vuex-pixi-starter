@@ -13,24 +13,31 @@
 </template>
 
 <script>
+	import { Events, EventBus } from '@/event-bus'
 	import Header from './components/Header.vue'
 	import Footer from './components/Footer.vue'
 
 	export default {
 		name: 'app',
-		props: ['routes', 'footer'],
+		props: ['pages', 'footer'],
 		components: {
 			'app-header': Header,
 			'app-footer': Footer
 		},
 		data () {
 			return {
-				'nav': this.routes,
+				'nav': this.pages,
 				'links': this.footer
 			}
 		},
 		created: function () {
 			console.log('App created!')
+		},
+		mounted () {
+			EventBus.$on(Events.EVENT_NAME, function (e) {
+				console.log('App.vue on EVENT_NAME', e)
+				alert('App.vue on EVENT_NAME', e)
+			})
 		},
 		methods: {
 			afterEnter: function (el) {
