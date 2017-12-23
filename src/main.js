@@ -2,6 +2,7 @@ import Vue from 'vue'
 import App from './App'
 import Router from 'vue-router'
 import vueResource from 'vue-resource'
+import store from './store'
 
 /*
 
@@ -11,8 +12,6 @@ import vueResource from 'vue-resource'
 
 import Page from './components/Page'
 import Legal from './components/Legal'
-import Test from './components/Test'
-import Users from './components/Users'
 
 /*
 
@@ -20,7 +19,7 @@ import Users from './components/Users'
 
 */
 
-import { pages, examples, footer } from './assets/json/static.json'
+import { pages, footer } from './assets/json/static.json'
 
 /*
 
@@ -30,8 +29,6 @@ import { pages, examples, footer } from './assets/json/static.json'
 
 pages.forEach(function (o) { o.component = Page })
 footer.forEach(function (o) { o.component = Legal })
-examples[0].component = Test
-examples[1].component = Users
 
 /*
 
@@ -48,7 +45,7 @@ Vue.use(Router)
 let router = new Router({
 	mode: 'history',
 	base: __dirname,
-	routes: pages.concat(examples, footer)
+	routes: pages.concat(footer)
 })
 
 /* Redirect (problematic for deeplinking) */
@@ -59,6 +56,7 @@ new Vue({
 	el: '#app',
 	template: '<App :pages="pages" :footer="footer"/>',
 	components: { App },
+	store,
 	data () {
 		return {
 			pages: pages,

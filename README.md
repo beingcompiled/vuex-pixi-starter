@@ -1,5 +1,6 @@
-
 Vue https://vuejs.org/v2/guide/
+
+Vuex https://vuex.vuejs.org/en/intro.html
 
 vue-router 2 https://router.vuejs.org/en/
 

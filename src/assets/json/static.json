@@ -8,50 +8,6 @@
 				"title": "Page Home",
 				"body": "Lorem Ipsum"
 			}
-		},
-		{
-			"name": "one",
-			"path": "/one/:param",
-			"link": "One",
-			"props": {
-				"title": "Page One",
-				"body": "Lorem Ipsum"
-			}
-		},
-		{
-			"name": "two",
-			"path": "/two/:param",
-			"link": "Two",
-			"props": {
-				"title": "Page Two",
-				"body": "Lorem Ipsum"
-			}
-		},
-		{
-			"name": "three",
-			"path": "/three/:param",
-			"link": "Three",
-			"props": {
-				"title": "Page Three",
-				"body": "Lorem Ipsum"
-			}
-		}
-	],
-	"examples": [
-		{
-			"name": "test",
-			"path": "/test",
-			"link": "Test",
-			"props": {
-				"title": "Page Test",
-				"msg": "Lorem Ipsum"
-			}
-		},
-		{
-			"name": "users",
-			"path": "/users/",
-			"link": "Users",
-			"props": {}
 		}
 	],
 	"footer": [
