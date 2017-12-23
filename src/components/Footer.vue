@@ -1,11 +1,11 @@
 <template>
-	<div class='footer'>
+	<footer class='footer'>
 		<ul>
 			<li v-for='item in links'>
-				<router-link :to="item.path">{{ item.link }}</router-link>
+				<router-link :to='item.path'>{{ item.link }}</router-link>
 			</li>
 		</ul>
-	</div>
+	</footer>
 </template>
 
 <script>

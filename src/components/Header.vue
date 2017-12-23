@@ -1,5 +1,5 @@
 <template>
-	<div class='header'>
+	<header class='header'>
 		<h1>Header</h1>
 		<ul>
 			<li v-for='(item, index) in nav'>
@@ -9,7 +9,7 @@
 				<router-link v-else :to="item.path">{{ item.link }}</router-link>
 			</li>
 		</ul>
-	</div>
+	</header>
 </template>
 
 <script>
@@ -25,5 +25,5 @@ export default {
 </script>
 
 <style lang='styl' scoped>
-	@import '~styl/component/Header.styl'
+		@import '~styl/component/Header.styl'
 </style>
