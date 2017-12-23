@@ -1,14 +1,14 @@
 /*
 
-imported globally webpack.base.conf.js
+IMPORTED GLOBALY webpack.base.conf.js
 
 plugins: [
   new webpack.LoaderOptionsPlugin({
-    options: {
-      stylus: {
-        import: [path.resolve(__dirname, '../src/assets/stylus/global.styl')]
-      }
-    }
+	options: {
+	  stylus: {
+		import: [path.resolve(__dirname, '../src/assets/stylus/global.styl')]
+	  }
+	}
   })
 ]
 
@@ -28,3 +28,15 @@ body
 	-moz-osx-font-smoothing grayscale
 	text-align center
 	color $dark
+
+/*
+
+	ANIMATIONS
+
+*/
+
+.fade-enter-active, .fade-leave-active
+	transition opacity 0.3s
+
+.fade-enter, .fade-leave-active
+	opacity 0
