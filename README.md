@@ -12,7 +12,7 @@ Babel https://babeljs.io/
 ESLint https://eslint.org/
 
 
-## Build Setup
+## Build
 
 ``` bash
 
