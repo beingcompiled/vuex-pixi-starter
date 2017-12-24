@@ -19,7 +19,7 @@ import Legal from './components/Legal'
 
 */
 
-import { pages, footer } from './assets/json/static.json'
+import { pages, footer, header } from './assets/locale/en.json'
 
 /*
 
@@ -54,13 +54,14 @@ let router = new Router({
 new Vue({
 	router,
 	el: '#app',
-	template: '<App :pages="pages" :footer="footer"/>',
+	template: '<App :pages="pages" :footer="footer" :header="header"/>',
 	components: { App },
 	store,
 	data () {
 		return {
 			pages: pages,
-			footer: footer
+			footer: footer,
+			header: header
 		}
 	}
 })

@@ -1,6 +1,6 @@
 <template>
 	<header class='header'>
-		<h1>Header</h1>
+		<h1>{{title}}</h1>
 		<ul>
 			<li v-for='(item, index) in nav'>
 				<router-link v-if='item.name !== "home"' :to="{ name: item.name, params: { param: 'param ' + index }}">
@@ -16,9 +16,12 @@
 export default {
 	name: 'Header',
 	props: {
-		nav: {
+		'nav': {
 			type: Array,
 			required: true
+		},
+		'title': {
+			type: String
 		}
 	}
 }

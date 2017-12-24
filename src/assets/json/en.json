@@ -8,6 +8,15 @@
 				"title": "Page Home",
 				"body": "Lorem Ipsum"
 			}
+		},
+		{
+			"name": "one",
+			"path": "/one",
+			"link": "One",
+			"props": {
+				"title": "Page One",
+				"body": "Lorem Ipsum"
+			}
 		}
 	],
 	"footer": [
@@ -29,5 +38,8 @@
 				"body": "Lorem Ipsum"
 			}
 		}
-	]
+	],
+	"header": {
+		"title": "Header"
+	}
 }

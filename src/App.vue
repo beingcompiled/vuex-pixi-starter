@@ -1,6 +1,6 @@
 <template>
 	<div id='app'>
-		<app-header v-bind:nav='nav'></app-header>
+		<app-header :title='header.title' :nav='nav'></app-header>
 		<app-counter></app-counter>
 		<transition name='fade' mode='out-in' v-on:after-enter='afterEnter' appear>
 			<!--  
@@ -21,7 +21,7 @@
 
 	export default {
 		name: 'app',
-		props: ['pages', 'footer'],
+		props: ['pages', 'footer', 'header'],
 		components: {
 			'app-header': Header,
 			'app-footer': Footer,
