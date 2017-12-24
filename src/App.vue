@@ -1,6 +1,7 @@
 <template>
 	<div id='app'>
 		<app-header v-bind:nav='nav'></app-header>
+		<app-counter></app-counter>
 		<transition name='fade' mode='out-in' v-on:after-enter='afterEnter' appear>
 			<!--  
 				Vue Router does not register any routing change if the same component is being used. 
@@ -16,13 +17,15 @@
 	import { Events, EventBus } from '@/event-bus'
 	import Header from './components/Header.vue'
 	import Footer from './components/Footer.vue'
+	import Counter from './components/Counter.vue'
 
 	export default {
 		name: 'app',
 		props: ['pages', 'footer'],
 		components: {
 			'app-header': Header,
-			'app-footer': Footer
+			'app-footer': Footer,
+			'app-counter': Counter
 		},
 		data () {
 			return {
@@ -38,6 +41,8 @@
 				console.log('App.vue on EVENT_NAME', e)
 				alert('App.vue on EVENT_NAME', e)
 			})
+
+			// this.$store.dispatch('increment')
 		},
 		methods: {
 			afterEnter: function (el) {

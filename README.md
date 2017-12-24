@@ -1,6 +1,9 @@
+
 Vue https://vuejs.org/v2/guide/
 
 Vuex https://vuex.vuejs.org/en/intro.html
+
+Vuex Persisted State Plugin https://www.npmjs.com/package/vuex-persistedstate
 
 vue-router 2 https://router.vuejs.org/en/
 
