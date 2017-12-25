@@ -20,6 +20,12 @@ const createLintingRule = () => ({
   }
 })
 
+/*
+module.exports = env => {
+  if (env.locale) process.env.LOCALE = env.locale
+}
+*/
+
 module.exports = {
   context: path.resolve(__dirname, '../'),
   entry: {

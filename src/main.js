@@ -19,7 +19,12 @@ import Legal from './components/Legal'
 
 */
 
-import { pages, footer, header } from './assets/locale/en.json'
+import fr from './assets/locale/fr.json'
+import en from './assets/locale/en.json'
+
+let staticData = (process.env.LOCALE === 'fr') ? fr : en
+
+console.log('process.env.LOCALE: ', process.env.LOCALE)
 
 /*
 
@@ -27,8 +32,8 @@ import { pages, footer, header } from './assets/locale/en.json'
 
 */
 
-pages.forEach(function (o) { o.component = Page })
-footer.forEach(function (o) { o.component = Legal })
+staticData.pages.forEach(function (o) { o.component = Page })
+staticData.footer.forEach(function (o) { o.component = Legal })
 
 /*
 
@@ -45,7 +50,7 @@ Vue.use(Router)
 let router = new Router({
 	mode: 'history',
 	base: __dirname,
-	routes: pages.concat(footer)
+	routes: staticData.pages.concat(staticData.footer)
 })
 
 /* Redirect (problematic for deeplinking) */
@@ -59,9 +64,9 @@ new Vue({
 	store,
 	data () {
 		return {
-			pages: pages,
-			footer: footer,
-			header: header
+			pages: staticData.pages,
+			footer: staticData.footer,
+			header: staticData.header
 		}
 	}
 })
