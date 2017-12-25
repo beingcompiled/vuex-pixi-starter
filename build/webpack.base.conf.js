@@ -4,6 +4,7 @@ const utils = require('./utils')
 const config = require('../config')
 const vueLoaderConfig = require('./vue-loader.conf')
 const webpack = require('webpack')
+const ProvidePlugin = require('webpack').ProvidePlugin;
 
 function resolve (dir) {
   return path.join(__dirname, '..', dir)
@@ -43,7 +44,7 @@ module.exports = {
     alias: {
       'vue$': 'vue/dist/vue.esm.js',
       '@': resolve('src'),
-      styl: path.resolve(__dirname, '../src/assets/stylus')
+      'styl': path.resolve(__dirname, '../src/assets/stylus')
     }
   },
   module: {

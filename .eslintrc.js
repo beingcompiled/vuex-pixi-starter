@@ -24,6 +24,8 @@ module.exports = {
 		'indent': [0, 'tab'],
 		'no-tabs': 0,
 		'no-new': 0,
-		'no-unused-vars': 0
+		'no-unused-vars': 0,
+		'no-trailing-spaces': 0,
+		'ignoreComments': 1
 	}
 }

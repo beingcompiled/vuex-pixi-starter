@@ -10,6 +10,7 @@ import store from './store'
 
 */
 
+import Game from './components/Game'
 import Page from './components/Page'
 import Legal from './components/Legal'
 
@@ -19,8 +20,8 @@ import Legal from './components/Legal'
 
 */
 
-import fr from './assets/locale/fr.json'
-import en from './assets/locale/en.json'
+import fr from './assets/static/fr.json'
+import en from './assets/static/en.json'
 
 let staticData = (process.env.LOCALE === 'fr') ? fr : en
 
@@ -32,6 +33,7 @@ console.log('process.env.LOCALE: ', process.env.LOCALE)
 
 */
 
+staticData.game.component = Game
 staticData.pages.forEach(function (o) { o.component = Page })
 staticData.footer.forEach(function (o) { o.component = Legal })
 
@@ -47,10 +49,12 @@ Vue.use(vueResource)
 
 Vue.use(Router)
 
+let routes = staticData.pages.concat(staticData.game, staticData.footer)
+
 let router = new Router({
 	mode: 'history',
 	base: __dirname,
-	routes: staticData.pages.concat(staticData.footer)
+	routes: routes
 })
 
 /* Redirect (problematic for deeplinking) */
@@ -64,7 +68,7 @@ new Vue({
 	store,
 	data () {
 		return {
-			pages: staticData.pages,
+			pages: staticData.pages.concat(staticData.game),
 			footer: staticData.footer,
 			header: staticData.header
 		}

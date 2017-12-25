@@ -1,4 +1,13 @@
 {
+	"game": {
+		"name": "game",
+		"path": "/game",
+		"link": "Game",
+		"props": {
+			"title": "Game",
+			"body": "Lorem Ipsum"
+		}
+	},
 	"pages": [
 		{
 			"name": "home",
@@ -6,15 +15,6 @@
 			"link": "Home",
 			"props": {
 				"title": "Page Home",
-				"body": "Lorem Ipsum"
-			}
-		},
-		{
-			"name": "one",
-			"path": "/one",
-			"link": "One",
-			"props": {
-				"title": "Page One",
 				"body": "Lorem Ipsum"
 			}
 		}
