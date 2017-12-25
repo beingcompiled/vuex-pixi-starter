@@ -16,6 +16,9 @@ Babel https://babeljs.io/
 ESLint https://eslint.org/
 
 
+* set env.LOCALE to build site from locale 'en' or 'fr' static json
+
+
 ## Build
 
 ``` bash
