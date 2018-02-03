@@ -10,7 +10,6 @@
 import imgLogo from '@/assets/image/logo.png';
 
 import * as Pixi from 'pixi.js'
-console.log('---', Pixi)
 
 export default {
 
@@ -18,24 +17,34 @@ export default {
 
 	data () {
 		return {
-
+			counter: 0
 		}
 	},
 	
-	mounted: () => {
+	mounted () {
+		console.log('mounted')
+		
 		let cvs = document.getElementById('cvs')
 
-		var app = new PIXI.Application(800, 600, {view: cvs, backgroundColor : 0x1099bb});
+		let app = new Pixi.Application(800, 600, {view: cvs, backgroundColor : 0x1099bb});
 
-		var logo = PIXI.Sprite.fromImage(imgLogo)
+		let logo = Pixi.Sprite.fromImage(imgLogo)
 		logo.anchor.set(0.5);
 		logo.x = app.screen.width / 2;
 		logo.y = app.screen.height / 2;
 		app.stage.addChild(logo)
 
-		app.ticker.add(function(delta) {
-		    logo.rotation += 0.1 * delta;
-		})
+		let basicText = new Pixi.Text('counter: 0');
+		basicText.x = 10;
+		basicText.y = 10;
+		app.stage.addChild(basicText)
+
+		app.ticker.add((delta) => {
+			logo.rotation += 0.1 * delta;
+
+			this.counter++
+			basicText.text = 'counter: ' + this.counter
+		})	
 	}
 }
 </script>
